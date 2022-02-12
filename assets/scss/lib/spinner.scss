@@ -1,0 +1,19 @@
+.loading-wrapper {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.loading {
+  width: 10vh;
+  height: 10vh;
+  display: inline-block;
+  border: 3px solid var(--color-dark);
+  border-top-color: var(--color-light);
+  border-radius: 50%;
+  animation: spin 1s ease-in-out infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
