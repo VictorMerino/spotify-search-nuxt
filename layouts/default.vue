@@ -15,10 +15,33 @@ const title = ref('VIC Spotify Search App')
     </Head>
   </Html>
 
-  <Header />
-  <main class="container">
-    <slot />
-  </main>
-
-  <Footer />
+  <div class="app-wrapper">
+    <Header />
+    <main class="container">
+      <slot />
+    </main>
+    <Footer />
+  </div>
 </template>
+
+<style>
+body {
+  margin: 0;
+}
+#app {
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+}
+
+.app-wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+</style>
