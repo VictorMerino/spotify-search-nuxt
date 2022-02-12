@@ -1,12 +1,17 @@
 <script setup lang="ts">
 import SearchBox from '@/components/SearchBox.vue'
 import ResultList from '@/components/ResultList.vue'
+import { useResultsStore } from '@/stores/results'
 
+const resultStore = useResultsStore()
 const isLoading = ref(false)
 const searchText = (text: string) => {
-  console.log(text)
+  // @ts-expect-error this fails type checking
+  resultStore.resultList = {}
+  isLoading.value = true
+  resultStore.searchText(text)
 }
-const resultList = computed(() => [])
+const resultList = computed(() => resultStore.resultList)
 </script>
 <template>
   <SearchBox @search-text="searchText" />

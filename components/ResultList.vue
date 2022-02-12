@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import ResultItem from './ResultItem.vue'
+
 const props = defineProps<{ resultRaw }>()
 </script>
 
