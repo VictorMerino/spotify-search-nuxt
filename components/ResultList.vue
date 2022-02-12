@@ -28,3 +28,29 @@ const props = defineProps<{ resultRaw }>()
     </template>
   </section>
 </template>
+
+<style lang="scss" scoped>
+h2 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+$breakpoints: (0px, 600px, 800px, 1000px, 1200px);
+$grid-breakpoints: (
+  'small' 1 nth($breakpoints, 1),
+  'mid' 2 nth($breakpoints, 2),
+  'large' 3 nth($breakpoints, 3),
+  'extra-large' 4 nth($breakpoints, 4),
+  'desktop' 5 nth($breakpoints, 5)
+);
+.grid-10 {
+  gap: 1em;
+  display: grid;
+
+  @each $name, $i, $width in $grid-breakpoints {
+    @media screen and (min-width: $width) {
+      grid-template-columns: repeat($i, 1fr);
+    }
+  }
+}
+</style>
