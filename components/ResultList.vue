@@ -5,7 +5,7 @@ const props = defineProps<{ resultRaw }>()
 </script>
 
 <template>
-  <section class="result-list container">
+  <section class="result-list">
     <template v-if="Object.entries(resultRaw).length">
       <template v-for="(resultType, name, index) in resultRaw" :key="index">
         <h2>{{ name }}</h2>

@@ -14,7 +14,9 @@ const searchText = (text: string) => {
 const resultList = computed(() => resultStore.resultList)
 </script>
 <template>
-  <SearchBox @search-text="searchText" />
-  <div v-if="isLoading" class="loading"></div>
-  <ResultList v-else :result-raw="resultList" />
+  <div class="container">
+    <SearchBox @search-text="searchText" />
+    <div v-if="isLoading" class="loading"></div>
+    <ResultList v-else :result-raw="resultList" />
+  </div>
 </template>

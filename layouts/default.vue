@@ -6,18 +6,18 @@ const title = ref('VIC Spotify Search App')
 </script>
 
 <template>
-  <Html lang="en">
-    <Head>
-      <Title>{{ title }}</Title>
-      <Meta
-        name="description"
-        :content="`App trying Nuxt 3 with Spotify Search API`" />
-    </Head>
-  </Html>
-
   <div class="app-wrapper bg-slate-800 text-slate-100">
+    <Html lang="en">
+      <Head>
+        <Title>{{ title }}</Title>
+        <Meta
+          name="description"
+          :content="`App trying Nuxt 3 with Spotify Search API`" />
+      </Head>
+    </Html>
+
     <Header />
-    <main class="container">
+    <main>
       <slot />
     </main>
     <Footer />
