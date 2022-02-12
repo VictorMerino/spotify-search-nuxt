@@ -1,5 +1,6 @@
 <template>
-  <div>
-    <h1>Main Index</h1>
-  </div>
+  <main>
+    <p>Searchbox</p>
+    <p>ResultList</p>
+  </main>
 </template>
