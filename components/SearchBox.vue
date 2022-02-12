@@ -21,9 +21,9 @@ function searchText() {
         v-model="searchField"
         data-testid="search-input"
         placeholder="Search for a track, artist and/or album"
-        class="search-input border border-slate-400 rounded-l-xl py-2 px-6 flex-1 focus-visible:outline-none" />
+        class="search-input border border-slate-400 rounded-l-full py-2 px-6 flex-1 focus-visible:outline-none" />
       <button
-        class="search-btn rounded-r-xl p-4 bg-slate-300"
+        class="search-btn rounded-r-full p-4 bg-slate-300"
         data-testid="search-btn"
         @click.prevent="searchText">
         Search
