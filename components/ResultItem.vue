@@ -28,7 +28,21 @@ const goToResult = () => emit('goToResult', props.item.id)
 </template>
 
 <style lang="scss" scoped>
+$radius-full: 50px;
+$radius-lite: 5px;
+
+$breakpoints: (0px, 600px, 800px, 1000px, 1200px);
+$grid-breakpoints: (
+  'small' 1 nth($breakpoints, 1),
+  'mid' 2 nth($breakpoints, 2),
+  'large' 3 nth($breakpoints, 3),
+  'extra-large' 4 nth($breakpoints, 4),
+  'desktop' 5 nth($breakpoints, 5)
+);
+
 $img-size: 64px;
+$radius-lite: 5px;
+$radius-full: 50px;
 .result {
   display: flex;
   justify-content: space-evenly;
