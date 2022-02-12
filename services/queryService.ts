@@ -1,5 +1,5 @@
 export const getResultsFromQuery = async (text: string) => {
-  let resultToSend = {}
+  let result = {}
   const json = await _requestAccessToken()
   const token = json.token
 
@@ -14,13 +14,11 @@ export const getResultsFromQuery = async (text: string) => {
         Authorization: 'Bearer ' + token
       }
     })
-    const result = await response.json()
-    resultToSend = result
-    return result
+    result = await response.json()
   } catch (error) {
     console.log(error)
   }
-  return resultToSend
+  return result
 }
 
 const _requestAccessToken = async () => {
