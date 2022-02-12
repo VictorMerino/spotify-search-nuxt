@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import ResultItem from './ResultItem.vue'
 const props = defineProps<{ resultRaw }>()
 </script>
 
@@ -12,7 +13,11 @@ const props = defineProps<{ resultRaw }>()
           class="grid-10"
           data-testid="results-wrapper"
           v-if="Object.entries(resultType.items).length">
-          Result {{ resultType }}
+          <ResultItem
+            v-for="(item, index) in resultType.items"
+            :key="`${item.type}-${index}`"
+            :item="item"
+            :layout="'list'" />
         </div>
         <div v-else data-testid="no-result-msg">No {{ name }} found</div>
       </template>
