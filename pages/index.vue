@@ -16,7 +16,9 @@ const resultList = computed(() => resultStore.resultList)
 <template>
   <div class="container">
     <SearchBox @search-text="searchText" />
-    <div v-if="true" class="loading-wrapper">
+    <div
+      v-if="isLoading && Object.entries(resultList).length === 0"
+      class="loading-wrapper">
       <div class="loading"></div>
     </div>
     <ResultList v-else :result-raw="resultList" />
