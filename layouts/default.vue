@@ -1,23 +1,24 @@
 <script setup>
+import Header from '@/components/structure/Header.vue'
+import Footer from '@/components/structure/Footer.vue'
+
 const title = ref('VIC Spotify Search App')
 </script>
 
 <template>
-  <div>
-    <Html lang="en">
-      <Head>
-        <Title>{{ title }}</Title>
-        <Meta
-          name="description"
-          :content="`App trying Nuxt 3 with Spotify Search API`" />
-      </Head>
-    </Html>
+  <Html lang="en">
+    <Head>
+      <Title>{{ title }}</Title>
+      <Meta
+        name="description"
+        :content="`App trying Nuxt 3 with Spotify Search API`" />
+    </Head>
+  </Html>
 
-    HEADER
-    <div class="container">
-      <slot />
-    </div>
+  <Header />
+  <main class="container">
+    <slot />
+  </main>
 
-    FOOTER
-  </div>
+  <Footer />
 </template>
