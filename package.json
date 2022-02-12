@@ -17,5 +17,9 @@
     "prettier": "^2.5.1",
     "sass": "^1.49.7",
     "tailwindcss": "^3.0.22"
+  },
+  "dependencies": {
+    "@pinia/nuxt": "^0.1.8",
+    "pinia": "^2.0.11"
   }
 }
