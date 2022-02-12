@@ -25,6 +25,13 @@ const title = ref('VIC Spotify Search App')
 </template>
 
 <style>
+:root {
+  --bg-color: #353535;
+  --color-dark: rgba(255, 255, 255, 0.3);
+  --color-light: #fff;
+  --color-links: #b3b3b3;
+  --bg-light: #3e3e3e;
+}
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
