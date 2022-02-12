@@ -15,7 +15,7 @@ const title = ref('VIC Spotify Search App')
     </Head>
   </Html>
 
-  <div class="app-wrapper">
+  <div class="app-wrapper bg-slate-800 text-slate-100">
     <Header />
     <main class="container">
       <slot />
@@ -27,12 +27,9 @@ const title = ref('VIC Spotify Search App')
 <style>
 body {
   margin: 0;
-}
-#app {
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
 }
 
 .app-wrapper {

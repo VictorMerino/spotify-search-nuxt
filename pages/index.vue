@@ -6,8 +6,6 @@ const searchText = (text: string) => {
 }
 </script>
 <template>
-  <main>
-    <SearchBox @search-text="searchText" />
-    <p>ResultList</p>
-  </main>
+  <SearchBox @search-text="searchText" />
+  <p>ResultList</p>
 </template>
