@@ -8,5 +8,13 @@ export default defineNuxtConfig({
       postcssOptions: require('./postcss.config.js')
     }
   },
-  buildModules: ['@pinia/nuxt']
+  buildModules: ['@pinia/nuxt'],
+  publicRuntimeConfig: {
+    SPOTIFY_SEARCH_URL: process.env.SPOTIFY_SEARCH_URL
+  },
+  privateRuntimeConfig: {
+    ACCOUNT_TOKEN_URL: process.env.ACCOUNT_TOKEN_URL,
+    CLIENT_ID: process.env.CLIENT_ID,
+    CLIENT_SECRET: process.env.CLIENT_SECRET
+  }
 })
