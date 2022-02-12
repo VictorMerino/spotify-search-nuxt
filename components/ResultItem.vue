@@ -52,7 +52,7 @@ $radius-full: 50px;
   padding: 0.75em;
   gap: 0.25em;
   min-height: 80px;
-  background-color: var(--bg-light);
+  @apply bg-slate-600;
   img {
     width: $img-size;
     height: $img-size;
