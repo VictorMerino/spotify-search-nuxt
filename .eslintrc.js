@@ -16,7 +16,10 @@ module.exports = {
     defineProps: 'readonly',
     defineEmits: 'readonly',
     defineExpose: 'readonly',
-    withDefaults: 'readonly'
+    withDefaults: 'readonly',
+    ref: 'readonly',
+    reactive: 'readonly',
+    computed: 'readonly'
   },
   plugins: ['prettier'],
   rules: {
@@ -34,6 +37,6 @@ module.exports = {
         // "breakBeforeElse": true
       }
     ],
-    'vue/multi-word-component-names': 'off'
+    'vue/multi-word-component-names': 0
   }
 }
