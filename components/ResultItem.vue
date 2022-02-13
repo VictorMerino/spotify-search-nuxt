@@ -14,7 +14,9 @@ const goToResult = () => emit('goToResult', props.item.id)
   <article class="result sm:text-center">
     <img v-if="item.images && item.images[2]" :src="item.images[2].url" />
     <img v-else src="/spotify_logo.png" />
-    <div class="title" data-testid="title">{{ item.name }}</div>
+    <div class="title" data-testid="title" :title="item.name">
+      {{ item.name }}
+    </div>
     <span v-if="item.artists" class="text-small artist">
       {{ item.artists[0].name }}
     </span>
