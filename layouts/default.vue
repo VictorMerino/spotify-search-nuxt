@@ -6,7 +6,7 @@ const title = ref('VIC Spotify Search App')
 </script>
 
 <template>
-  <div class="app-wrapper bg-slate-800 text-slate-100">
+  <div class="app-wrapper bg-slate-800 text-slate-50">
     <Html lang="en">
       <Head>
         <Title>{{ title }}</Title>
@@ -26,11 +26,11 @@ const title = ref('VIC Spotify Search App')
 
 <style>
 :root {
-  --bg-color: #353535;
+  --bg-dark: #353535;
+  --bg-light: #3e3e3e;
   --color-dark: rgba(255, 255, 255, 0.3);
   --color-light: #fff;
   --color-links: #b3b3b3;
-  --bg-light: #3e3e3e;
 }
 body {
   margin: 0;
