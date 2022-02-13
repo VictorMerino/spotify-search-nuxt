@@ -21,7 +21,7 @@ const goToResult = () => emit('goToResult', props.item.id)
     <span v-if="item.total_tracks" class="text-small duration">
       {{ item.total_tracks }} tracks
     </span>
-    <span v-if="layout === 'list'" class="link-to-result">
+    <span v-if="layout === 'list'" class="link-to-result hidden sm:block">
       <a href="#" @click.prevent="goToResult"> Go to result </a>
     </span>
   </article>
@@ -29,13 +29,39 @@ const goToResult = () => emit('goToResult', props.item.id)
 
 <style lang="scss" scoped>
 @use '@/assets/scss/common.scss';
-$img-size: 64px;
+$img-size: 80px;
 $radius-lite: 5px;
 $radius-full: 50px;
 .result {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  @media (max-width: nth(common.$breakpoints, 2)) {
+    @supports (display: grid) {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(auto, 4em));
+      grid-template-rows: 1fr 1fr;
+      overflow: hidden;
+      img {
+        grid-column: 1/3;
+        grid-row: 1/3;
+      }
+      .title {
+        grid-column: 3/7;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .artist,
+      .duration {
+        grid-column: span 2;
+      }
+    }
+  }
+
+  @media (min-width: nth(common.$breakpoints, 2)) {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+  }
   border-radius: $radius-lite;
   margin-bottom: 1em;
   padding: 0.75em;
@@ -43,10 +69,10 @@ $radius-full: 50px;
   min-height: 80px;
   @apply bg-slate-700;
   img {
-    width: $img-size;
-    height: $img-size;
     border-radius: $radius-full;
     padding: 0.5em;
+    width: $img-size;
+    height: $img-size;
   }
   .title {
     font-weight: bold;
