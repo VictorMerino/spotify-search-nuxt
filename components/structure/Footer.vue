@@ -4,7 +4,9 @@
       <div class="flex">
         <span class="text-xl hidden md:block">Footer</span>
       </div>
-      <div class="footer-right flex items-center justify-between">2022</div>
+      <div class="footer-right flex items-center justify-between">
+        {{ new Date().getFullYear() }}
+      </div>
     </div>
   </footer>
 </template>
