@@ -11,7 +11,7 @@ const goToResult = () => emit('goToResult', props.item.id)
 </script>
 
 <template>
-  <article class="result">
+  <article class="result sm:text-center">
     <img v-if="item.images && item.images[2]" :src="item.images[2].url" />
     <img v-else src="/spotify_logo.png" />
     <div class="title" data-testid="title">{{ item.name }}</div>
