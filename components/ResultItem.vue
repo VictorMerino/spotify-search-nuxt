@@ -41,7 +41,7 @@ $radius-full: 50px;
   padding: 0.75em;
   gap: 0.25em;
   min-height: 80px;
-  @apply bg-slate-600;
+  @apply bg-slate-700;
   img {
     width: $img-size;
     height: $img-size;
