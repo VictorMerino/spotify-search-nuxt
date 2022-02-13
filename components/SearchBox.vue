@@ -20,7 +20,7 @@ function searchText() {
         placeholder="Search for a track, artist and/or album"
         class="search-input rounded-l-full py-2 px-6 flex-1 text-slate-800 focus-visible:outline-none" />
       <button
-        class="search-btn rounded-r-full p-4 bg-slate-300 text-slate-800"
+        class="search-btn rounded-r-full p-4 bg-slate-600 text-slate-50"
         data-testid="search-btn"
         @click.prevent="searchText">
         Search
