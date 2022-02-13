@@ -17,4 +17,5 @@ export default defineNuxtConfig({
     CLIENT_ID: process.env.CLIENT_ID,
     CLIENT_SECRET: process.env.CLIENT_SECRET
   }
+  // TO-DO: change dir structure to /src folder: {}
 })
