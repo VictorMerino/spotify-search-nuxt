@@ -16,11 +16,11 @@ const title = ref('VIC Spotify Search App')
       </Head>
     </Html>
 
-    <Header />
+    <slot name="header"><Header /></slot>
     <main>
       <slot />
     </main>
-    <Footer />
+    <slot name="footer"><Footer /></slot>
   </div>
 </template>
 
