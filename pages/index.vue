@@ -22,6 +22,7 @@ const resultList = computed(() => resultStore.resultList)
       <div class="loading"></div>
     </div>
     <ResultList v-else :result-raw="resultList" />
+    <!-- TO-DO: error when searching: spinner goes forever. Timeout?? -->
   </div>
 </template>
 
