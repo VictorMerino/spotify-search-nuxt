@@ -22,9 +22,8 @@ export const getResultsFromQuery = async (text: string) => {
 }
 
 const _requestAccessToken = async () => {
-  return await fetch('http://localhost:3030/register-spotify-app')
+  return await fetch('/api/spotify')
     .then(result => {
-      console.log('line 31', result)
       return result.json()
     })
     .catch(error => console.log(error))
