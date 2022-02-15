@@ -38,13 +38,24 @@ Improvements: let user select between them.
 ---
 ### Technologies used:
 - Vue 3 as the main frontend framework (with Typescript)
-- Nuxt 3 as the meta framework
+- Nuxt 3 Beta as the meta framework
 - Vite (with Nuxi) for build and development server
 - Pinia for state management
 - SCSS
 - Tailwind CSS
 - Nitro Server Engine (from Nuxt) for API endpoint that retrieve app token. Improvement: check if token still valid and avoid retrieving it again. Maybe make all calls from Nitro instead of directly from front? Does it make any sense?
 - Prettier + ESLint custom config
+
+### Next steps:
+- Unit Tests with Vitest
+- E2E Tests with Cypress
+- Result page: don't know if will need to filter in total results, or maybe a posibility to search for an item based on its id (hopefully last option)
+- Song Player: WebAudioAPI? SpotifyAPI? Maybe both?
+- Separate .env and .local.env
+- Check if token is already provided
+- All http calls from backend? Not actually sure
+- More detailed types and interfaces
+- Different
 
 ---
 ---
