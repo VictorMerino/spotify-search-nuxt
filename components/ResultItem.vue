@@ -7,7 +7,10 @@ const props = defineProps<{
 const emit = defineEmits<{
   (e: 'goToResult', id: string): void
 }>()
-const goToResult = () => emit('goToResult', props.item.id)
+const goToResult = () => {
+  alert('Not implemented')
+  emit('goToResult', props.item.id)
+}
 </script>
 
 <template>
