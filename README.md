@@ -1,33 +1,3 @@
-# Nuxt 3 Minimal Starter
-
-We recommend to look at the [documentation](https://v3.nuxtjs.org).
-
-## Setup
-
-Make sure to install the dependencies
-
-```bash
-npm install
-```
-
-## Development
-
-Start the development server on http://localhost:3000
-
-```bash
-npm run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Checkout the [deployment documentation](https://v3.nuxtjs.org/docs/deployment).
-
 # Spotify Search
 
 App that searchs in Spotify based on user input.
@@ -55,8 +25,7 @@ Improvements: let user select between them.
 - Check if token is already provided
 - All http calls from backend? Not actually sure
 - More detailed types and interfaces
-- Different
-
+- Different component depend on item type? (at least a different design...)
 ---
 ---
 # Really important:
