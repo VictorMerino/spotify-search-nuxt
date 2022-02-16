@@ -13,4 +13,5 @@ export interface Result {
   images: Image[]
   name: string
   total_tracks?: number
+  // TO-DO: type: artist | track | album
 }
