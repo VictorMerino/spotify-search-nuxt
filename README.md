@@ -19,13 +19,14 @@ Improvements: let user select between them.
 ### Next steps:
 - Unit Tests with Vitest
 - E2E Tests with Cypress
+- Or maybe we can try with Testing Library...
 - Result page: don't know if will need to filter in total results, or maybe a posibility to search for an item based on its id (hopefully last option)
 - Song Player: WebAudioAPI? SpotifyAPI? Maybe both?
 - Separate .env and .local.env
 - Check if token is already provided
 - All http calls from backend? Not actually sure
 - More detailed types and interfaces
-- Different component depend on item type? (at least a different design...)
+- Different component depend on item type? (at least a different design... --Layouts--)
 ---
 ---
 # Really important:
