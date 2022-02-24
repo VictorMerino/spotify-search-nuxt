@@ -19,7 +19,10 @@ module.exports = {
     withDefaults: 'readonly',
     ref: 'readonly',
     reactive: 'readonly',
-    computed: 'readonly'
+    computed: 'readonly',
+    // For tests:
+    it: 'readonly',
+    test: 'readonly'
   },
   plugins: ['prettier'],
   rules: {
