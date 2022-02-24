@@ -25,6 +25,7 @@ Improvements: let user select between them.
 - Check if token is already provided
 - All http calls from backend? Not actually sure
 - More detailed types and interfaces
+- Or maybe we can better use: https://www.npmjs.com/package/@types/spotify-api (It seems stable)
 - Different component depend on item type? (at least a different design... --Layouts--)
 
 ### User tests to be written (for Testing Library tests):
