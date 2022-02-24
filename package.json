@@ -10,6 +10,7 @@
   "devDependencies": {
     "@testing-library/user-event": "^13.5.0",
     "@testing-library/vue": "^6.4.2",
+    "@types/jest": "^27.4.1",
     "@types/request": "^2.48.8",
     "@types/request-promise": "^4.1.48",
     "@vitejs/plugin-vue": "^2.2.0",
