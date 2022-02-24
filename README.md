@@ -32,7 +32,6 @@ Improvements: let user select between them.
 
 
 ### TO-DO list:
-
   - Reload result detail (this view is still not implemented)
   - Search without a query
   - Check if token is already present
@@ -42,6 +41,7 @@ Improvements: let user select between them.
   - Add animations: at least when going to result page from results list
   - Add mocks for service
   - Debounce: do not need to click enter to search, but with a delayed from user call to endpoint
+  - Try open-props: if used, it would deprecate Tailwind (not sure if sass as well, maybe not, for responsive layout functions)
   - Feature: que la grafía no vaya de la mano. Búsqueda predictiva
 */
 ---
