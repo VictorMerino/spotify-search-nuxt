@@ -4,7 +4,7 @@ import { describe, expect } from 'vitest'
 
 describe('About page tests', () => {
   expect(true).toBe(true)
-  it('shows', async () => {
+  it('shows About text', async () => {
     const ELEMENT_TEXT = 'About'
 
     const { getByText } = render(About)
