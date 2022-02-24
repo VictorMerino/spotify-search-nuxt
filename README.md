@@ -19,7 +19,6 @@ Improvements: let user select between them.
 ### Next steps:
 - Unit Tests with Vitest
 - E2E Tests with Cypress
-- Or maybe we can try with Testing Library...
 - Result page: don't know if will need to filter in total results, or maybe a posibility to search for an item based on its id (hopefully last option)
 - Song Player: WebAudioAPI? SpotifyAPI? Maybe both?
 - Separate .env and .local.env
@@ -27,6 +26,24 @@ Improvements: let user select between them.
 - All http calls from backend? Not actually sure
 - More detailed types and interfaces
 - Different component depend on item type? (at least a different design... --Layouts--)
+
+### User tests to be written (for Testing Library tests):
+  - Si buscas Bowie, te tiene que salir todas las canciones que tengan la palabra Bowie, los artistas que lo contengan, y aunque menos, también los álbumes
+
+
+### TO-DO list:
+
+  - Reload result detail (this view is still not implemented)
+  - Search without a query
+  - Check if token is already present
+  - If token is not present or call to search fails: get Token again, but only in these cases
+  - First, we will try storing the variable in Pinia results store
+  - When every query be managed by Nitro backend, this check will be done in the server
+  - Add animations: at least when going to result page from results list
+  - Add mocks for service
+  - Debounce: do not need to click enter to search, but with a delayed from user call to endpoint
+  - Feature: que la grafía no vaya de la mano. Búsqueda predictiva
+*/
 ---
 ---
 # Really important:
