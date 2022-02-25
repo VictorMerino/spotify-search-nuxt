@@ -2,6 +2,7 @@
 import SearchBox from '@/components/SearchBox.vue'
 import ResultList from '@/components/ResultList.vue'
 import { useResultsStore } from '@/stores/results'
+import { ref, computed } from 'vue'
 
 const resultStore = useResultsStore()
 const isLoading = ref(false)
