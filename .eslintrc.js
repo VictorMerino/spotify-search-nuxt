@@ -40,6 +40,7 @@ module.exports = {
         // "breakBeforeElse": true
       }
     ],
-    'vue/multi-word-component-names': 0
+    'vue/multi-word-component-names': 0,
+    'no-magic-numbers': 1
   }
 }
