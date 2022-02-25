@@ -7,7 +7,25 @@ import { useResultsStore } from '@/stores/results'
 import Index from '@/pages/index.vue'
 import { createPinia } from 'pinia'
 
-describe.skip('Index page tests', () => {
+import { resultRaw } from '@/tests/unit/mocks/results'
+import { Result } from '~~/types/Result'
+
+vi.mock('@/stores/results.ts', () => ({
+  useResultsStore: vi.fn(() => ({
+    resultList: {},
+    activeResult: {},
+    async searchText(text: string) {
+      console.log(text)
+      this.resultList = resultRaw
+    },
+    setActiveResult(result: Result) {
+      this.activeResult = result
+    }
+  }))
+}))
+
+describe('Index page tests', () => {
+  // TO-DO: check to fix this cleaner way:
   function factory(options?: TestingOptions) {
     const wrapper = mount(Index, {
       global: {
@@ -19,11 +37,25 @@ describe.skip('Index page tests', () => {
 
     return { wrapper, resultsStore }
   }
-  it('shows', async () => {
-    const createSpy = () => vi.spyOn(useResultsStore, {})
-    const { resultsStore, wrapper } = factory({ createSpy })
+  it.skip('try with factory and createPinia: with no luck', async () => {
+    // const createSpy = () => vi.spyOn(useResultsStore, {})
+    const { resultsStore, wrapper } = factory({
+      /* createSpy */
+    })
 
     const realPinia = createPinia()
     const storeWithRealPinia = useResultsStore(realPinia)
+  })
+  it('is loading', async () => {
+    /*     const wrapper = mount(Index)
+    console.log(wrapper.html())
+    expect(wrapper.text()).toContain('Search') */
+
+    const { getByText, getByRole } = render(Index)
+    const button = getByText('Search')
+
+    await fireEvent.click(button)
+
+    getByRole('loading')
   })
 })
