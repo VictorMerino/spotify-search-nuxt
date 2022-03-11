@@ -14,7 +14,10 @@ export const getResultsFromQuery = async (text: string) => {
         Authorization: 'Bearer ' + token
       }
     })
-    result = await response.json()
+
+    result = response.ok
+      ? await response.json()
+      : { error: await response.json() }
   } catch (error) {
     console.log(error)
   }

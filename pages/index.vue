@@ -21,6 +21,9 @@ const resultList = computed(() => resultStore.resultList)
       class="loading-wrapper">
       <div class="loading"></div>
     </div>
+    <div v-else-if="resultList.error">
+      <div class="alert-message">{{ resultList.error.error.message }}</div>
+    </div>
     <ResultList v-else :result-raw="resultList" />
     <!-- TO-DO: error when searching: spinner goes forever. Timeout?? -->
   </div>
@@ -28,4 +31,13 @@ const resultList = computed(() => resultStore.resultList)
 
 <style lang="scss">
 @import '@/assets/scss/lib/spinner.scss';
+.alert-message {
+  @apply mx-4;
+  border: 1px solid #ffeeba;
+  border-radius: var(--radius-lite);
+  margin-top: 2em;
+  padding: 1em;
+  background-color: #fff3cd;
+  color: #856404;
+}
 </style>

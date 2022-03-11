@@ -35,8 +35,6 @@ const goToResult = () => {
 <style lang="scss" scoped>
 @use '@/assets/scss/common.scss';
 $img-size: 80px;
-$radius-lite: 5px;
-$radius-full: 50px;
 .result {
   @media (max-width: nth(common.$breakpoints, 2)) {
     @supports (display: grid) {
@@ -67,14 +65,14 @@ $radius-full: 50px;
     align-items: center;
     text-align: center;
   }
-  border-radius: $radius-lite;
+  border-radius: var(--radius-lite);
   margin-bottom: 1em;
   padding: 0.75em;
   gap: 0.25em;
   min-height: 80px;
   @apply bg-slate-700;
   img {
-    border-radius: $radius-full;
+    border-radius: var(--radius-full);
     padding: 0.5em;
     width: $img-size;
     height: $img-size;
