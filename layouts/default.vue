@@ -32,6 +32,7 @@ const title = ref('VIC Spotify Search App')
   --color-light: #fff;
   --color-links: #b3b3b3;
   --radius-lite: 5px;
+  --radius-full: 50px;
 }
 body {
   margin: 0;
