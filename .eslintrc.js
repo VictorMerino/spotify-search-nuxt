@@ -19,7 +19,8 @@ module.exports = {
     withDefaults: 'readonly',
     ref: 'readonly',
     reactive: 'readonly',
-    computed: 'readonly'
+    computed: 'readonly',
+    onMounted: 'readonly'
   },
   plugins: ['prettier'],
   rules: {
