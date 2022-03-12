@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { useResultsStore } from '@/stores/results'
 
+import ResultItem from '@/components/ResultItem'
+
 const resultStore = useResultsStore()
 const resultItem = computed(() => resultStore.resultItem)
 onMounted(() => {
@@ -9,7 +11,7 @@ onMounted(() => {
 })
 </script>
 <template>
-  <div class="container">
-    <pre>{{ resultItem }}</pre>
+  <div class="container my-4">
+    <ResultItem :item="resultItem.tracks[0]" />
   </div>
 </template>
