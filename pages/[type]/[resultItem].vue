@@ -3,13 +3,12 @@ import { useResultsStore } from '@/stores/results'
 
 import ResultItem from '@/components/ResultItem'
 
+const routerParams = useRoute().params
+
 const resultStore = useResultsStore()
 const resultItem = computed(() => resultStore.resultItem)
 onMounted(() => {
-  resultStore.getSingleResult(
-    useRoute().params.resultItem,
-    useRoute().params.type
-  )
+  resultStore.getSingleResult(routerParams.resultItem, routerParams.type)
 })
 </script>
 <template>
