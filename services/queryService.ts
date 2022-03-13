@@ -1,3 +1,5 @@
+import { ResultType } from '@/types/Result'
+
 export const getResultsFromQuery = async (text: string) => {
   let result = {}
   const json = await _requestAccessToken()
@@ -24,16 +26,15 @@ export const getResultsFromQuery = async (text: string) => {
   return result
 }
 
-export const getTrack = async (trackId: string) => {
+export const getSingleResult = async (id: string, type: ResultType) => {
   let result = {}
   const json = await _requestAccessToken()
   const token = json.token
 
-  const trackUrl = 'https://api.spotify.com/v1/tracks'
-  const getResultsEndpoint = `${trackUrl}?ids=${trackId}`
+  const getResultEndpoint = `https://api.spotify.com/v1/${type}s/${id}`
 
   try {
-    const response = await fetch(getResultsEndpoint, {
+    const response = await fetch(getResultEndpoint, {
       headers: {
         'Content-Type': 'application/json',
         Authorization: 'Bearer ' + token

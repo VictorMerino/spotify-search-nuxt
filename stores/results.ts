@@ -1,5 +1,5 @@
-import { getResultsFromQuery, getTrack } from '@/services/queryService'
-import { Result } from '@/types/Result'
+import { getResultsFromQuery, getSingleResult } from '@/services/queryService'
+import { Result, ResultType } from '@/types/Result'
 import { defineStore } from 'pinia'
 
 export const useResultsStore = defineStore('results', {
@@ -15,8 +15,8 @@ export const useResultsStore = defineStore('results', {
       const result = await getResultsFromQuery(text)
       this.resultList = result
     },
-    async getTrack(trackId: string) {
-      const result = await getTrack(trackId)
+    async getSingleResult(id: string, resultType: ResultType) {
+      const result = await getSingleResult(id, resultType)
       this.resultItem = result
     },
     setActiveResult(result: Result) {
