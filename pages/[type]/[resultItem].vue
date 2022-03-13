@@ -6,7 +6,10 @@ import ResultItem from '@/components/ResultItem'
 const resultStore = useResultsStore()
 const resultItem = computed(() => resultStore.resultItem)
 onMounted(() => {
-  resultStore.getSingleResult(useRoute().params.resultItem, 'album')
+  resultStore.getSingleResult(
+    useRoute().params.resultItem,
+    useRoute().params.type
+  )
 })
 </script>
 <template>
