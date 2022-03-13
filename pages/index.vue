@@ -4,8 +4,8 @@ import ResultList from '@/components/ResultList.vue'
 import { useResultsStore } from '@/stores/results'
 
 const router = useRouter()
-
 const resultStore = useResultsStore()
+
 const isLoading = ref(false)
 const searchText = (text: string) => {
   // @ts-expect-error this fails type checking
