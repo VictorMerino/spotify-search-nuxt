@@ -14,7 +14,7 @@ const searchText = (text: string) => {
   resultStore.searchText(text)
 }
 const goToResult = (id: string, type: string) => {
-  router.push({ name: 'type-resultItem', params: { type, resultItem: id } })
+  router.push({ name: 'type-id', params: { type, id } })
 }
 const resultList = computed(() => resultStore.resultList)
 </script>

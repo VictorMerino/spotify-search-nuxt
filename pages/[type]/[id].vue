@@ -8,7 +8,7 @@ const routerParams = useRoute().params
 const resultStore = useResultsStore()
 const resultItem = computed(() => resultStore.resultItem)
 onMounted(() => {
-  resultStore.getSingleResult(routerParams.resultItem, routerParams.type)
+  resultStore.getSingleResult(routerParams.id, routerParams.type)
 })
 </script>
 <template>
