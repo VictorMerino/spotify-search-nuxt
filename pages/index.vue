@@ -3,13 +3,18 @@ import SearchBox from '@/components/SearchBox.vue'
 import ResultList from '@/components/ResultList.vue'
 import { useResultsStore } from '@/stores/results'
 
+const router = useRouter()
 const resultStore = useResultsStore()
+
 const isLoading = ref(false)
 const searchText = (text: string) => {
   // @ts-expect-error this fails type checking
   resultStore.resultList = {}
   isLoading.value = true
   resultStore.searchText(text)
+}
+const goToResult = (id: string, type: string) => {
+  router.push({ name: 'type-id', params: { type, id } })
 }
 const resultList = computed(() => resultStore.resultList)
 </script>
@@ -24,8 +29,7 @@ const resultList = computed(() => resultStore.resultList)
     <div v-else-if="resultList.error">
       <div class="alert-message">{{ resultList.error.error.message }}</div>
     </div>
-    <ResultList v-else :result-raw="resultList" />
-    <!-- TO-DO: error when searching: spinner goes forever. Timeout?? -->
+    <ResultList v-else :result-raw="resultList" @go-to-result="goToResult" />
   </div>
 </template>
 

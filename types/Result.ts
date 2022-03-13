@@ -6,6 +6,8 @@ type Image = {
   url: string
 }
 
+export type ResultType = 'artist' | 'track' | 'album'
+
 export interface Result {
   id: string
   artists: Artist[]
@@ -13,5 +15,6 @@ export interface Result {
   images: Image[]
   name: string
   total_tracks?: number
-  // TO-DO: type: artist | track | album
+  type: ResultType
+  error?: unknown
 }

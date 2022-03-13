@@ -19,7 +19,10 @@ module.exports = {
     withDefaults: 'readonly',
     ref: 'readonly',
     reactive: 'readonly',
-    computed: 'readonly'
+    computed: 'readonly',
+    onMounted: 'readonly',
+    useRoute: 'readonly',
+    useRouter: 'readonly'
   },
   plugins: ['prettier'],
   rules: {

@@ -1,7 +1,14 @@
 <script lang="ts" setup>
 import ResultItem from './ResultItem.vue'
 
-const props = defineProps<{ resultRaw }>()
+defineProps<{ resultRaw }>()
+const emit = defineEmits<{
+  (e: 'goToResult', id: string, type: string): void
+}>()
+
+const goToResult = (id: string, type: string) => {
+  emit('goToResult', id, type)
+}
 </script>
 
 <template>
@@ -18,7 +25,8 @@ const props = defineProps<{ resultRaw }>()
             v-for="(item, index) in resultType.items"
             :key="`${item.type}-${index}`"
             :item="item"
-            :layout="'list'" />
+            :layout="'list'"
+            @go-to-result="goToResult" />
         </div>
         <div v-else data-testid="no-result-msg">No {{ name }} found</div>
       </template>

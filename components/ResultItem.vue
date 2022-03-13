@@ -1,15 +1,14 @@
 <script lang="ts" setup>
-import { Result } from '@/types/Result'
+import { Result, ResultType } from '@/types/Result'
 const props = defineProps<{
   item: Result
   layout: string
 }>()
 const emit = defineEmits<{
-  (e: 'goToResult', id: string): void
+  (e: 'goToResult', id: string, type: ResultType): void
 }>()
 const goToResult = () => {
-  alert('Not implemented')
-  emit('goToResult', props.item.id)
+  emit('goToResult', props.item.id, props.item.type)
 }
 </script>
 
