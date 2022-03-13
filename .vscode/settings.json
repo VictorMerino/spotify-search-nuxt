@@ -13,5 +13,5 @@
   "[html]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "scss.lint.unknownAtRules": "ignore" // This is needed for eslint to not warn about using @apply
+  "scss.lint.unknownAtRules": "ignore"
 }
