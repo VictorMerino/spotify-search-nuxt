@@ -5,9 +5,7 @@ const props = defineProps<{
   layout: string
 }>()
 
-const { goToResult } = inject('singleResultProvider', () => {
-  console.log('default')
-})
+const { goToResult } = inject('singleResultProvider', () => null)
 const getValues = () => {
   goToResult({ id: props.item.id, type: props.item.type })
 }
