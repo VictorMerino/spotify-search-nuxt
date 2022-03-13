@@ -3,6 +3,8 @@ import SearchBox from '@/components/SearchBox.vue'
 import ResultList from '@/components/ResultList.vue'
 import { useResultsStore } from '@/stores/results'
 
+const router = useRouter()
+
 const resultStore = useResultsStore()
 const isLoading = ref(false)
 const searchText = (text: string) => {
@@ -13,6 +15,7 @@ const searchText = (text: string) => {
 }
 const goToResult = (id: string, type: string) => {
   console.table({ id, type })
+  router.push({ name: 'track-resultItem', params: { resultItem: id } })
 }
 const resultList = computed(() => resultStore.resultList)
 </script>
