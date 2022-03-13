@@ -30,7 +30,6 @@ const resultList = computed(() => resultStore.resultList)
       <div class="alert-message">{{ resultList.error.error.message }}</div>
     </div>
     <ResultList v-else :result-raw="resultList" @go-to-result="goToResult" />
-    <!-- TO-DO: error when searching: spinner goes forever. Timeout?? -->
   </div>
 </template>
 
