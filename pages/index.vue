@@ -30,7 +30,7 @@ provide('singleResultProvider', { goToResult })
     <div v-else-if="resultList.error">
       <div class="alert-message">{{ resultList.error.error.message }}</div>
     </div>
-    <ResultList v-else :result-raw="resultList" @go-to-result="goToResult" />
+    <ResultList v-else :result-raw="resultList" />
   </div>
 </template>
 

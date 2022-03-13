@@ -5,10 +5,6 @@ defineProps<{ resultRaw }>()
 const emit = defineEmits<{
   (e: 'goToResult', id: string, type: string): void
 }>()
-
-const goToResult = (id: string, type: string) => {
-  emit('goToResult', id, type)
-}
 </script>
 
 <template>
@@ -25,8 +21,7 @@ const goToResult = (id: string, type: string) => {
             v-for="(item, index) in resultType.items"
             :key="`${item.type}-${index}`"
             :item="item"
-            :layout="'list'"
-            @go-to-result="goToResult" />
+            :layout="'list'" />
         </div>
         <div v-else data-testid="no-result-msg">No {{ name }} found</div>
       </template>
