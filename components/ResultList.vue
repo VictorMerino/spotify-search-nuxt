@@ -1,13 +1,13 @@
 <script lang="ts" setup>
 import ResultItem from './ResultItem.vue'
 
-const props = defineProps<{ resultRaw }>()
+defineProps<{ resultRaw }>()
 const emit = defineEmits<{
-  (e: 'goToResult', id: string): void
+  (e: 'goToResult', id: string, type: string): void
 }>()
 
-const goToResult = (id: string) => {
-  emit('goToResult', id)
+const goToResult = (id: string, type: string) => {
+  emit('goToResult', id, type)
 }
 </script>
 

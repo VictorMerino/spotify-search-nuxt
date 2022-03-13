@@ -11,8 +11,8 @@ const searchText = (text: string) => {
   isLoading.value = true
   resultStore.searchText(text)
 }
-const goToResult = (id: string) => {
-  console.log(id)
+const goToResult = (id: string, type: string) => {
+  console.table({ id, type })
 }
 const resultList = computed(() => resultStore.resultList)
 </script>
