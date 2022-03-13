@@ -13,10 +13,11 @@ const searchText = (text: string) => {
   isLoading.value = true
   resultStore.searchText(text)
 }
-const goToResult = (id: string, type: string) => {
+const resultList = computed(() => resultStore.resultList)
+function goToResult({ id, type }) {
   router.push({ name: 'type-id', params: { type, id } })
 }
-const resultList = computed(() => resultStore.resultList)
+provide('singleResultProvider', { goToResult })
 </script>
 <template>
   <div class="container">

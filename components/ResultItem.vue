@@ -1,14 +1,15 @@
 <script lang="ts" setup>
-import { Result, ResultType } from '@/types/Result'
+import { Result } from '@/types/Result'
 const props = defineProps<{
   item: Result
   layout: string
 }>()
-const emit = defineEmits<{
-  (e: 'goToResult', id: string, type: ResultType): void
-}>()
-const goToResult = () => {
-  emit('goToResult', props.item.id, props.item.type)
+
+const { goToResult } = inject('singleResultProvider', () => {
+  console.log('default')
+})
+const getValues = () => {
+  goToResult({ id: props.item.id, type: props.item.type })
 }
 </script>
 
@@ -26,7 +27,7 @@ const goToResult = () => {
       {{ item.total_tracks }} tracks
     </span>
     <span v-if="layout === 'list'" class="link-to-result hidden sm:block">
-      <a href="#" @click.prevent="goToResult"> Go to result </a>
+      <a href="#" @click.prevent="getValues"> Go to result </a>
     </span>
   </article>
 </template>
