@@ -8,7 +8,6 @@ const emit = defineEmits<{
   (e: 'goToResult', id: string): void
 }>()
 const goToResult = () => {
-  alert('Not implemented')
   emit('goToResult', props.item.id)
 }
 </script>
