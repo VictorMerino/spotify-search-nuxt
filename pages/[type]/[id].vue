@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useResultsStore } from '@/stores/results'
 
-import ResultItem from '@/components/ResultItem'
+import ResultItem from '@/components/ResultItem.vue'
 
 const routerParams = useRoute().params
 
