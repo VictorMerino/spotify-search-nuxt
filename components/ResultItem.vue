@@ -25,8 +25,11 @@ const goToResult = () => {
     <span v-if="item.total_tracks" class="text-small duration">
       {{ item.total_tracks }} tracks
     </span>
-    <span v-if="layout === 'list'" class="link-to-result hidden sm:block">
-      <a href="#" @click.prevent="goToResult"> Go to result </a>
+    <span
+      v-if="layout === 'list'"
+      class="link-to-result sm:block"
+      style="grid-column: span 3">
+      <a href="#" @click.prevent="goToResult"> Go to result --> </a>
     </span>
   </article>
 </template>
