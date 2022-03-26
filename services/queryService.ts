@@ -55,5 +55,5 @@ const _requestAccessToken = async () => {
     .then(result => {
       return result.json()
     })
-    .catch(error => console.log(error))
+    .catch(error => new Error(error))
 }
