@@ -16,6 +16,7 @@ module.exports = {
     defineProps: 'readonly',
     defineEmits: 'readonly',
     defineExpose: 'readonly',
+    inject: 'readonly',
     withDefaults: 'readonly',
     ref: 'readonly',
     reactive: 'readonly',
