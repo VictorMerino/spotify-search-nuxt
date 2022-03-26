@@ -18,10 +18,15 @@ export default async () => {
   }
 
   let token: string
+  let returnedError: Error
 
   await requestPromise.post(authOptions, function (error, response, body) {
-    if (error) console.log(error)
-    token = body.access_token
+    if (error) {
+      returnedError = error
+    } else {
+      token = body.access_token
+    }
   })
-  return { token }
+
+  return { token, error: returnedError }
 }
